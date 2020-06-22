@@ -20,14 +20,35 @@ body {
   color: white;
 }
 
+#page-header {
+  margin-bottom: 2rem;
+}
+
 #content {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #upload-preview {
-  margin-top: 2rem;
-  max-width: 400px;
+  max-width: 300px;
+}
+
+#dogs-container {
+  display: flex;
+}
+
+.dog-image {
+  max-width: 300px;
+  display: block;
+}
+
+.dog {
+  text-align: center;
+}
+
+#dog-separator {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem 0;
 }

@@ -6,6 +6,10 @@
   <script src="{% static "core/upload.js" %}" defer></script>
 {% endblock %}
 
+{% block page-header %}
+  Upload a new image
+{% endblock %}
+
 {% block content %}
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}

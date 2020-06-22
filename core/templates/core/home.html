@@ -1,1 +1,37 @@
 {% extends "core/base.html" %}
+
+{% load static %}
+
+{% block scripts %}
+  <script src="{% static "core/home.js" %}" defer></script>
+{% endblock %}
+
+{% block page-header %}
+  Who's better? Click to choose.
+{% endblock %}
+
+{% block content %}
+  <form id="dogs-form" method="post">
+    {% csrf_token %}
+    <input id="winner-input" name="winner" hidden>
+
+    <div id="dogs-container">
+      {% for dog in dogs %}
+        <input id="dog{{ forloop.counter }}-input" name="dog{{ forloop.counter }}" value="{{ dog.pk }}" hidden>
+
+        <div class="dog">
+          <strong>Rank:</strong> {{ dog.rank }}
+          <br>
+          <strong>Rating:</strong> {{ dog.rating|floatformat:"0" }}
+          <input id="dog{{ forloop.counter }}-image" type="image" class="dog-image" src="{{ dog.image.url }}">
+        </div>
+
+        {% if forloop.first %}
+          <div id="dog-separator">
+            or
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </form>
+{% endblock %}
