@@ -4,7 +4,7 @@ from django.db.models import Count, Q
 
 class Dog(models.Model):
     rating = models.DecimalField(decimal_places=3, max_digits=7, default=1000)
-    image = models.ImageField(upload_to="uploads/%Y/%m/%d/", width_field="width", height_field="height")
+    image = models.ImageField(upload_to="uploads/")
 
     def __str__(self):
         return f"pk={self.pk}, rating={self.rating}"

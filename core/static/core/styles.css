@@ -20,3 +20,14 @@ body {
   color: white;
 }
 
+#content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#upload-preview {
+  margin-top: 2rem;
+  max-width: 400px;
+}

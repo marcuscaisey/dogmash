@@ -5,6 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="{% static "core/styles.css" %}">
+  {% block scripts %}{% endblock %}
   <title>Dogmash</title>
 </head>
 
@@ -14,11 +15,13 @@
   <nav>
     <a class="nav-link" href="{% url "core:home" %}">Home</a>
     <a class="nav-link" href="">Rankings</a>
-    <a class="nav-link" href="">Upload</a>
+    <a class="nav-link" href="{% url "core:upload" %}">Upload</a>
   </nav>
 </div>
 
-{% block content %}{% endblock %}
+<div id="content">
+  {% block content %}{% endblock %}
+</div>
 
 </body>
 </html>

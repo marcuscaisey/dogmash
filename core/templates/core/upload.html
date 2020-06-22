@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block scripts %}
+  <script src="{% static "core/upload.js" %}" defer></script>
+{% endblock %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.image }}
+    <button type="submit">Upload</button>
+  </form>
+
+  <img id="upload-preview">
+{% endblock %}
