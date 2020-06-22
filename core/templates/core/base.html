@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static "core/styles.css" %}">
+  <title>Dogmash</title>
+</head>
+
+<body>
+<div id="header">
+  <h1 id="header-title">Dogmash</h1>
+  <nav>
+    <a class="nav-link" href="">Home</a>
+    <a class="nav-link" href="">Rankings</a>
+    <a class="nav-link" href="">Upload</a>
+  </nav>
+</div>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
