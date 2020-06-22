@@ -1,0 +1,5 @@
+-r main.txt
+black
+django_extensions
+flake8
+pip-tools
