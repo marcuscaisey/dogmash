@@ -2,6 +2,8 @@
 black
 django_extensions
 flake8
+jupytemplate
 jupyter
+jupyter_contrib_nbextensions
 pip-tools
 ptpython
