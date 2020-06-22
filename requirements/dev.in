@@ -2,4 +2,6 @@
 black
 django_extensions
 flake8
+jupyter
 pip-tools
+ptpython
