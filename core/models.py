@@ -67,4 +67,3 @@ class Dog(models.Model):
 
         with self.image.open("wb"):
             image.save(self.image)
-

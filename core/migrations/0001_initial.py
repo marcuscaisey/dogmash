@@ -7,16 +7,15 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Dog',
+            name="Dog",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('rating', models.DecimalField(decimal_places=3, max_digits=7)),
-                ('image', models.ImageField(upload_to='')),
+                ("id", models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("rating", models.DecimalField(decimal_places=3, max_digits=7)),
+                ("image", models.ImageField(upload_to="")),
             ],
         ),
     ]
