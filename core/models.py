@@ -20,7 +20,9 @@ class Dog(models.Model):
         super().save(*args, **kwargs)
 
         if self.image.width > 300 or self.image.height > 400:
-            image = Image.open(self.image.path)
+            with self.image.open() as f:
+                image = Image.open(f)
+                image.load()
 
             if image.width > 300:
                 aspect_ratio = self.image.width / self.image.height
@@ -29,5 +31,6 @@ class Dog(models.Model):
             if image.height > 400:
                 image = image.crop((0, image.height - 400, 300, image.height))
 
-            image.save(self.image.path)
+            with self.image.open("wb") as f:
+                image.save(self.image)
 
