@@ -5,7 +5,7 @@ from PIL import Image
 
 
 class Dog(models.Model):
-    rating = models.DecimalField(decimal_places=3, max_digits=7, default=1000)
+    rating = models.IntegerField(default=1000)
     image = models.ImageField(upload_to="uploads/")
 
     def __str__(self):

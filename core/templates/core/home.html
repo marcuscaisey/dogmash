@@ -22,7 +22,7 @@
         <div class="dog">
           <strong>Rank:</strong> {{ dog.rank }}
           <br>
-          <strong>Rating:</strong> {{ dog.rating|floatformat:"0" }}
+          <strong>Rating:</strong> {{ dog.rating }}
           <input id="dog{{ forloop.counter }}-image" type="image" class="dog-image" src="{{ dog.image.url }}">
         </div>
 
