@@ -39,7 +39,6 @@ body {
 }
 
 .dog-image {
-  max-width: 300px;
   display: block;
 }
 
@@ -51,4 +50,13 @@ body {
   display: flex;
   align-items: center;
   margin: 0 1rem 0;
+}
+
+#active-page-link {
+  color: #8c1c08;
+}
+
+#rankings-table, #rankings-table td, #rankings-table th {
+  border: 1px solid black;
+  border-collapse: collapse;
 }

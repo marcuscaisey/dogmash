@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+
+{% block page-header %}
+  Rankings
+{% endblock %}
+
+{% block content %}
+  <table id="rankings-table">
+    <tr>
+      <th>Rank</th>
+      <th>Rating</th>
+      <th>Dog</th>
+    </tr>
+
+    {% for dog in page_obj.object_list %}
+      <tr>
+        <td>{{ dog.rank }}</td>
+        <td>{{ dog.rating }}</td>
+        <td><img src="{{ dog.thumbnail.url }}"></td>
+      </tr>
+    {% endfor %}
+  </table>
+
+  {% if page_obj.has_other_pages %}
+    <nav>
+      {% for i in paginator.page_range %}
+        {% if i == page_obj.number %}
+          <span id="active-page-link">{{ i }}</span>
+        {% else %}
+          <a href="?page={{ i }}">{{ i }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  {% endif %}
+{% endblock %}

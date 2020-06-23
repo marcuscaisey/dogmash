@@ -2,7 +2,7 @@ import random
 
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, ListView
 
 from .forms import DogRatingForm
 from .models import Dog
@@ -28,6 +28,13 @@ def home(request):
 
     dogs = random.sample(tuple(Dog.objects.all()), k=2)
     return render(request, "core/home.html", {"dogs": dogs})
+
+
+class RankingsView(ListView):
+    template_name = "core/rankings.html"
+    model = Dog
+    ordering = "-rating"
+    paginate_by = 5
 
 
 class UploadView(CreateView):
