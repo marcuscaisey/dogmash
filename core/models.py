@@ -24,7 +24,7 @@ class Dog(models.Model):
         self._save_thumbnail(64, 64)
         self._resize_image(300, 400)
 
-    def _save_thumbnail(self, width, height):
+    def _save_thumbnail(self, width):
         if self.thumbnail:
             return
 
@@ -42,7 +42,7 @@ class Dog(models.Model):
             crop_start = (image.height - image.width) // 2
             image = image.crop((0, crop_start, image.width, crop_start + image.width))
 
-        image.thumbnail((width, height))
+        image.thumbnail((width, width))
 
         image_bytes = io.BytesIO()
         image.save(image_bytes, format)
