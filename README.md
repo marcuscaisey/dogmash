@@ -1,5 +1,5 @@
 # Dogmash
-This is a clone of Mark Zuckerberg's website [Facemash](https://en.wikipedia.org/wiki/History_of_Facebook#FaceMash), built using Django as a quick* exercise in file handling. Dogs are rated using the [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) and users can upload their own images.
+This is a clone of Mark Zuckerberg's website [Facemash](https://en.wikipedia.org/wiki/History_of_Facebook#FaceMash) (except with dogs), built using Django as a quick* exercise in file handling. Dogs are rated using the [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) and users can upload their own images.
 
 \* _Hence the lack of design._
 
